@@ -148,6 +148,11 @@
                 "Variable": "$.JobType",
                 "StringEquals": "run_lambda",
                 "Next": "RunLambdaTask"
+              },
+              {
+                "Variable": "$.JobType",
+                "StringEquals": "noop",
+                "Next": "NoopTask"
               }
             ],
             "Default": "UnknownTask"
@@ -252,6 +257,22 @@
             "Comment": "Unknown task type.",
             "Type": "Task",
             "Resource": "${etl_task_unknown_arn}",
+            "ResultPath": "$.TaskOutput",
+            "Next": "CheckTaskStatus",
+            "Catch": [
+              {
+                "ErrorEquals": [
+                  "States.TaskFailed"
+                ],
+                "Next": "CheckTaskStatus",
+                "ResultPath": "$.TaskOutput"
+              }
+            ]
+          },
+          "NoopTask": {
+            "Comment": "NOOP task type.",
+            "Type": "Task",
+            "Resource": "${etl_task_noop_arn}",
             "ResultPath": "$.TaskOutput",
             "Next": "CheckTaskStatus",
             "Catch": [

@@ -1,0 +1,12 @@
+{
+    "ETLJob": {
+      "etl_tasks": [
+        {
+          "type": "noop",
+          "active": true
+        }
+      ]
+    },
+    "JobType": "noop",
+    "TaskIndex": 0
+  }

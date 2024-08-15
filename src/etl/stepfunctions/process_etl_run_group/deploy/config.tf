@@ -16,6 +16,7 @@ resource "aws_sfn_state_machine" "sfn_state_machine-$$INSTANCE$$" {
     etl_task_encrypt_arn:   data.terraform_remote_state.etl_task_encrypt_lambda.outputs.etl_task_encrypt_arn,
     etl_task_file_copy_arn:      data.terraform_remote_state.etl_task_file_copy_lambda.outputs.etl_task_file_copy_arn,
     etl_task_unknown_arn:   data.terraform_remote_state.etl_task_unknown_lambda.outputs.etl_task_unknown_arn,
+    etl_task_noop_arn:   data.terraform_remote_state.etl_task_noop_lambda.outputs.etl_task_noop_arn,
     check_etl_job_task_status_arn:  data.terraform_remote_state.check_etl_job_task_status_lambda.outputs.check_etl_job_task_status_arn,
     etl_email_results_arn:  data.terraform_remote_state.etl_email_results_lambda.outputs.etl_email_results_arn,
     etl_task_run_lambda_arn: data.terraform_remote_state.etl_task_run_lambda.outputs.etl_task_run_lambda_arn
