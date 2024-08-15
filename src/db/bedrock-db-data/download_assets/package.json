@@ -1,8 +1,8 @@
 {
-  "name": "loadfiles",
+  "name": "download_assets",
   "version": "1.0.0",
   "description": "",
-  "main": "loadfiles.js",
+  "main": "download_assets.js",
   "type": "module",
   "scripts": {
     "preinstall": "npm install ../../../bedrock_common/packages --install-links; npm install ../../../bedrock_common/bedrock_common --install-links"

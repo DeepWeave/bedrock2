@@ -1,4 +1,4 @@
-dirs = load_assets
+dirs = upload_assets
 
 .PHONY: $(dirs) init plan apply apply-y destroy db seed
 

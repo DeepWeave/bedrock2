@@ -1,8 +1,8 @@
 {
-  "name": "loadfiles",
+  "name": "upload_assets",
   "version": "1.0.0",
   "description": "",
-  "main": "loadfiles.js",
+  "main": "upload_assets.js",
   "type": "module",
   "scripts": {
     "preinstall": "npm install ../../../bedrock_common/table_copy --install-links; npm install ../../../bedrock_common/bedrock_common --install-links"

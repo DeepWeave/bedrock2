@@ -1,4 +1,4 @@
-## LoadFiles
+## UploadAssets
 Copy json files into the database
 
 This is a utility to read managed-data-assets json files into database tables.

@@ -17,4 +17,4 @@ local: node_modules
 	export BEDROCK_DB_PASSWORD=$(BEDROCK_DB_PASSWORD) \
 	export BEDROCK_DB_NAME=$(BEDROCK_DB_NAME) \
 	export data_directory=$(data_directory) \
-	node load_files.js
+	node download_assets.js
